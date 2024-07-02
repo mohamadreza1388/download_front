@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+    --color1 : #F9FDFF;
+    --color2 : #FFFFFF;
+    --shadow : 0 0 30px 0px rgb(0 0 0 / 5%);
+}
+body{
+    direction: rtl;
+}
