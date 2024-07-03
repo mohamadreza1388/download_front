@@ -1,0 +1,128 @@
+@font-face {
+    font-family: 'iconsax';
+    src: url('../fonts/iconsax/iconsax.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'iconsax' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-android:before {
+    content: "\e91e";
+  }
+  .icon-apple:before {
+    content: "\e91f";
+  }
+  .icon-box-1:before {
+    content: "\e920";
+  }
+  .icon-global:before {
+    content: "\e921";
+  }
+  .icon-windows:before {
+    content: "\e922";
+  }
+  .icon-archive:before {
+    content: "\e900";
+  }
+  .icon-arrow-down:before {
+    content: "\e901";
+  }
+  .icon-arrow-down-1:before {
+    content: "\e902";
+  }
+  .icon-arrow-left:before {
+    content: "\e903";
+  }
+  .icon-arrow-left-1:before {
+    content: "\e904";
+  }
+  .icon-arrow-right:before {
+    content: "\e905";
+  }
+  .icon-arrow-right-1:before {
+    content: "\e906";
+  }
+  .icon-arrow-up:before {
+    content: "\e907";
+  }
+  .icon-arrow-up-1:before {
+    content: "\e908";
+  }
+  .icon-calendar:before {
+    content: "\e909";
+  }
+  .icon-chart:before {
+    content: "\e90a";
+  }
+  .icon-coffee:before {
+    content: "\e90b";
+  }
+  .icon-copy:before {
+    content: "\e90c";
+  }
+  .icon-copyright:before {
+    content: "\e90d";
+  }
+  .icon-document-1:before {
+    content: "\e90e";
+  }
+  .icon-document-download:before {
+    content: "\e90f";
+  }
+  .icon-famo:before {
+    content: "\e910";
+  }
+  .icon-folder-open:before {
+    content: "\e911";
+  }
+  .icon-game:before {
+    content: "\e912";
+  }
+  .icon-heart:before {
+    content: "\e913";
+  }
+  .icon-instagram:before {
+    content: "\e914";
+  }
+  .icon-layer:before {
+    content: "\e915";
+  }
+  .icon-location:before {
+    content: "\e916";
+  }
+  .icon-message:before {
+    content: "\e917";
+  }
+  .icon-mobile:before {
+    content: "\e918";
+  }
+  .icon-monitor:before {
+    content: "\e919";
+  }
+  .icon-music:before {
+    content: "\e91a";
+  }
+  .icon-search-normal-1:before {
+    content: "\e91b";
+  }
+  .icon-user:before {
+    content: "\e91c";
+  }
+  .icon-video:before {
+    content: "\e91d";
+  }
