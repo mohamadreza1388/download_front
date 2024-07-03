@@ -16,8 +16,26 @@
     <link href="css/sax.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
-<body class="bg-[--color1] mb-12">
+<body class="bg-[--color1] mb-12" theme="dark">
 <div class="my-container mx-auto">
+    <div class="search-wrapper">
+        <div class="search-box transition-all duration-700 w-[550px] h-[143px] fixed start-1/2 translate-x-[50%] bg-[--color2] rounded-[20px] pos-hidden-top z-50 p-5">
+            <div class="flex justify-between items-center flex-row-reverse">
+                <img src="img/close.png" alt="" class="w-[30px] h-[30px] search-close cursor-pointer">
+                <span class="font-[iran-yekan-bold] text-gray-500">جستجو در سایت</span>
+            </div>
+            <hr noshade class="my-3">
+                <form action="" method="get">
+                    <label for="search" class="hidden"></label>
+                    <div class="flex justify-center items-center gap-3 mt-4">
+                    <input type="search" id="search" name="search" class="w-full font-[iran-yekan-number] bg-[--color7] h-[35px] rounded-[8px] ps-2 focus-visible:outline-0" placeholder="کلمه مورد نظر را وارد کنید">
+                    <button type="submit" class="w-[90px] h-[35px] text-[14px] bg-[--color5] my-hover2 p-0 m-0 rounded-[8px] text-white font-[iran-yekan-normal]">جستجو</button>
+                    </div>
+                </form>
+
+        </div>
+        <div class="search-overlay w-full h-vh bg-[--color6] fixed top-0 start-0 z-40 hidden"></div>
+    </div>
     <header class="flex gap-3.5 mt-12">
         <div class="h-[70px] basis-1/4 bg-[--color2] my-shadow rounded-[20px] flex items-center justify-start p-2.5 gap-3.5">
             <div class="w-12 h-12 bg-[--color4] flex justify-center items-center rounded-[10px] font-[iran-yekan-normal] text-[--color5]  my-shadow2 ">ف</div>
@@ -49,9 +67,11 @@
     <div class="mt-3.5 bg-[--color2] w-full h-[50px] rounded-[20px] my-shadow flex justify-between items-center px-4">
         <span class="text-gray-400 text-[12px] font-[iran-yekan-normal]">این وب سایت در ستاد ساماندهی ثبت می باشد و طبق قوانین آن فعالیت می کند.</span>
         <div class="icon-box flex justify-center items-center gap-2">
-            <img class="w-[19px] h-[19px] my-op cursor-pointer" src="img/moon.svg" alt="">
-            <img class="w-[19px] h-[19px] my-op cursor-pointer" src="img/user.svg" alt="">
-            <img class="w-[19px] h-[19px] my-op cursor-pointer" src="img/search.svg" alt="">
+            <span class="w-[17px] h-[17px] cursor-pointer moon-btn" data="dark">
+                <svg class="w-[17px] h-[17px] " xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="" x="0px" y="0px" viewBox="0 0 49.739 49.739" style="enable-background:new 0 0 49.739 49.739;" xml:space="preserve"><path class="stroke-[--svg]" d="M25.068,48.889c-9.173,0-18.017-5.06-22.396-13.804C-3.373,23.008,1.164,8.467,13.003,1.979l2.061-1.129l-0.615,2.268 c-1.479,5.459-0.899,11.25,1.633,16.306c2.75,5.493,7.476,9.587,13.305,11.526c5.831,1.939,12.065,1.492,17.559-1.258v0 c0.25-0.125,0.492-0.258,0.734-0.391l2.061-1.13l-0.585,2.252c-1.863,6.873-6.577,12.639-12.933,15.822 C32.639,48.039,28.825,48.888,25.068,48.889z M12.002,4.936c-9.413,6.428-12.756,18.837-7.54,29.253 c5.678,11.34,19.522,15.945,30.864,10.268c5.154-2.582,9.136-7.012,11.181-12.357c-5.632,2.427-11.882,2.702-17.752,0.748 c-6.337-2.108-11.473-6.557-14.463-12.528C11.899,15.541,11.11,10.16,12.002,4.936z"></path></svg>
+            </span>
+            <span class="w-[19px] h-[19px] icon-user cursor-pointer login-btn text-[--icon]"></span>
+                <span class="w-[19px] h-[19px] icon-search-normal-1 cursor-pointer search-btn text-[--icon]"></span>
         </div>
     </div>
     <a href="#">
@@ -368,7 +388,7 @@
                     <span class="text-[--color2] font-[iran-yekan-normal] text-[14px]" dir="ltr" >@instagram</span>
                 </div>
                 <div class="basis-1/2 justify-end items-start flex">
-                    <a href="" class="w-[90px] h-[30px] rounded-[8px] bg-[--color2] text-[13px] flex justify-center items-center font-[iran-yekan-normal]">دنبال کردن</a>
+                    <a href="" class="fallow w-[90px] h-[30px] rounded-[8px] bg-[--color2] text-[13px] flex justify-center items-center font-[iran-yekan-normal]">دنبال کردن</a>
                 </div>
             </div>
             <div class="telegram flex rounded-[20px] mt-4 h-[75px] w-full  p-[14px]">
@@ -377,7 +397,7 @@
                     <span class="text-[--color2] font-[iran-yekan-normal] text-[14px]" dir="ltr" >@telegram</span>
                 </div>
                 <div class="basis-1/2 justify-end items-start flex">
-                    <a href="" class="w-[90px] h-[30px] rounded-[8px] bg-[--color2] text-[13px] flex justify-center items-center font-[iran-yekan-normal]">دنبال کردن</a>
+                    <a href="" class="fallow w-[90px] h-[30px] rounded-[8px] bg-[--color2] text-[13px] flex justify-center items-center font-[iran-yekan-normal]">دنبال کردن</a>
                 </div>
             </div>
             <div class="w-full min-h-[150px] bg-[--color2] my-shadow rounded-[20px] p-4 mt-4">
@@ -445,7 +465,7 @@
             </div>
         </div>
         <div class="basis-8/12 min-h-[200px] software">
-            <div class="soft min-h-[348px] bg-white my-shadow rounded-[20px] mt-4 p-4">
+            <div class="soft min-h-[348px] bg-[--color2] my-shadow rounded-[20px] mt-4 p-4">
                 <div class="flex justify-between items-center">
                     <div class="flex justify-start items-center">
                         <div class="w-[40px] h-[40px] bg-[--color3] rounded-[8px] flex justify-center items-center">
@@ -482,247 +502,7 @@
                     <img src="img/microsoft-edge.png" alt="" class="w-[150px] inline-block">
                 </div>
                 <div class="justify-end flex items-center w-full mt-6">
-                    <a href="#" class="flex justify-center items-center bg-[--color5] text-[--color2] rounded-[10px] font-[iran-yekan-normal] text-[13px] w-[103px] h-[34px] my-hover2">ادامه مطلب</a>
-                </div>
-            </div>
-            <div class="soft min-h-[348px] bg-white my-shadow rounded-[20px] mt-4 p-4">
-                <div class="flex justify-between items-center">
-                    <div class="flex justify-start items-center">
-                        <div class="w-[40px] h-[40px] bg-[--color3] rounded-[8px] flex justify-center items-center">
-                            <span class="icon-windows text-[25px]"></span>
-                        </div>
-                        <h2 class="text-[#758694] font-[iran-yekan-bold] ms-2 text-[15px]">Microsoft Edge 96.0.1054.53 Win/Mac/Android + Portable مرورگر مایکروسافت اج کرومیوم</h2>
-                    </div>
-                    <div class="flex justify-center items-center flex-row-reverse">
-                        <span class="icon-heart text-[20px] text-red-600 cursor-pointer"></span>
-                        <span class="text-red-600 font-[iran-yekan-number] me-1 text-[13px]">27</span>
-                    </div>
-                </div>
-                <div class="flex mt-4 gap-5">
-                    <div class="flex gap-1.5 items-center justify-start ">
-                        <span class="icon-archive text-gray-400"></span>
-                        <span class="font-[iran-yekan-normal] text-gray-400 text-[13px]">مرورگر, نرم افزار</span>
-                    </div>
-                    <div class="flex gap-1.5 items-center justify-start ">
-                        <span class="icon-calendar text-gray-400"></span>
-                        <span class="font-[iran-yekan-normal] text-gray-400 text-[12px]">13 تیر 1403</span>
-                    </div>
-                    <div class="flex gap-1.5 items-center justify-start ">
-                        <span class="icon-chart text-gray-400"></span>
-                        <span class="font-[iran-yekan-normal] text-gray-400 text-[12px]">470 بازدید</span>
-                    </div>
-                    <div class="flex gap-1.5 items-center justify-start ">
-                        <span class="icon-message text-gray-400"></span>
-                        <span class="font-[iran-yekan-normal] text-gray-400 text-[12px]">نظر</span>
-                    </div>
-                </div>
-                <hr noshade class="bg-gray-300 mt-4">
-                <div class="mt-4 flex">
-                    <p class="item-paragraph font-[iran-yekan-normal] text-[13px] leading-7 text-gray-400 inline-block">Microsoft Edge مایکروسافت پس از تلاش فراوان مرورگر اج را جایگزین اینترنت اکسپلورر کرد اما با وجود فایرفاکس و گوگل کروم باز هم نتوانست جایی در بین کاربران اینترنت برای خود دست و پا کند. در نهایت مایکروسافت تصمیم گرفت تا مرورگر Microsoft Edge را با هسته کرومیوم احیا کند که ظاهری شبیه به گوگل کروم دارد. سرعت بالا از نقاط قوت مرورگر Edge میباشد و کمبودی که از نسخه قبل مشاهده میشد در این نسخه جبران شده و آن پشتیبانی از افزونه های متنوع و پر کاربرد است، که با وجود هسته کرومیوم امکان دانلود و نصب افزونه های گوگل کروم از chrome web store وجود دارد.</p>
-                    <img src="img/microsoft-edge.png" alt="" class="w-[150px] inline-block">
-                </div>
-                <div class="justify-end flex items-center w-full mt-6">
-                    <a href="#" class="flex justify-center items-center bg-[--color5] text-[--color2] rounded-[10px] font-[iran-yekan-normal] text-[13px] w-[103px] h-[34px] my-hover2">ادامه مطلب</a>
-                </div>
-            </div>
-            <div class="soft min-h-[348px] bg-white my-shadow rounded-[20px] mt-4 p-4">
-                <div class="flex justify-between items-center">
-                    <div class="flex justify-start items-center">
-                        <div class="w-[40px] h-[40px] bg-[--color3] rounded-[8px] flex justify-center items-center">
-                            <span class="icon-windows text-[25px]"></span>
-                        </div>
-                        <h2 class="text-[#758694] font-[iran-yekan-bold] ms-2 text-[15px]">Microsoft Edge 96.0.1054.53 Win/Mac/Android + Portable مرورگر مایکروسافت اج کرومیوم</h2>
-                    </div>
-                    <div class="flex justify-center items-center flex-row-reverse">
-                        <span class="icon-heart text-[20px] text-red-600 cursor-pointer"></span>
-                        <span class="text-red-600 font-[iran-yekan-number] me-1 text-[13px]">27</span>
-                    </div>
-                </div>
-                <div class="flex mt-4 gap-5">
-                    <div class="flex gap-1.5 items-center justify-start ">
-                        <span class="icon-archive text-gray-400"></span>
-                        <span class="font-[iran-yekan-normal] text-gray-400 text-[13px]">مرورگر, نرم افزار</span>
-                    </div>
-                    <div class="flex gap-1.5 items-center justify-start ">
-                        <span class="icon-calendar text-gray-400"></span>
-                        <span class="font-[iran-yekan-normal] text-gray-400 text-[12px]">13 تیر 1403</span>
-                    </div>
-                    <div class="flex gap-1.5 items-center justify-start ">
-                        <span class="icon-chart text-gray-400"></span>
-                        <span class="font-[iran-yekan-normal] text-gray-400 text-[12px]">470 بازدید</span>
-                    </div>
-                    <div class="flex gap-1.5 items-center justify-start ">
-                        <span class="icon-message text-gray-400"></span>
-                        <span class="font-[iran-yekan-normal] text-gray-400 text-[12px]">نظر</span>
-                    </div>
-                </div>
-                <hr noshade class="bg-gray-300 mt-4">
-                <div class="mt-4 flex">
-                    <p class="item-paragraph font-[iran-yekan-normal] text-[13px] leading-7 text-gray-400 inline-block">Microsoft Edge مایکروسافت پس از تلاش فراوان مرورگر اج را جایگزین اینترنت اکسپلورر کرد اما با وجود فایرفاکس و گوگل کروم باز هم نتوانست جایی در بین کاربران اینترنت برای خود دست و پا کند. در نهایت مایکروسافت تصمیم گرفت تا مرورگر Microsoft Edge را با هسته کرومیوم احیا کند که ظاهری شبیه به گوگل کروم دارد. سرعت بالا از نقاط قوت مرورگر Edge میباشد و کمبودی که از نسخه قبل مشاهده میشد در این نسخه جبران شده و آن پشتیبانی از افزونه های متنوع و پر کاربرد است، که با وجود هسته کرومیوم امکان دانلود و نصب افزونه های گوگل کروم از chrome web store وجود دارد.</p>
-                    <img src="img/microsoft-edge.png" alt="" class="w-[150px] inline-block">
-                </div>
-                <div class="justify-end flex items-center w-full mt-6">
-                    <a href="#" class="flex justify-center items-center bg-[--color5] text-[--color2] rounded-[10px] font-[iran-yekan-normal] text-[13px] w-[103px] h-[34px] my-hover2">ادامه مطلب</a>
-                </div>
-            </div>
-            <div class="soft min-h-[348px] bg-white my-shadow rounded-[20px] mt-4 p-4">
-                <div class="flex justify-between items-center">
-                    <div class="flex justify-start items-center">
-                        <div class="w-[40px] h-[40px] bg-[--color3] rounded-[8px] flex justify-center items-center">
-                            <span class="icon-windows text-[25px]"></span>
-                        </div>
-                        <h2 class="text-[#758694] font-[iran-yekan-bold] ms-2 text-[15px]">Microsoft Edge 96.0.1054.53 Win/Mac/Android + Portable مرورگر مایکروسافت اج کرومیوم</h2>
-                    </div>
-                    <div class="flex justify-center items-center flex-row-reverse">
-                        <span class="icon-heart text-[20px] text-red-600 cursor-pointer"></span>
-                        <span class="text-red-600 font-[iran-yekan-number] me-1 text-[13px]">27</span>
-                    </div>
-                </div>
-                <div class="flex mt-4 gap-5">
-                    <div class="flex gap-1.5 items-center justify-start ">
-                        <span class="icon-archive text-gray-400"></span>
-                        <span class="font-[iran-yekan-normal] text-gray-400 text-[13px]">مرورگر, نرم افزار</span>
-                    </div>
-                    <div class="flex gap-1.5 items-center justify-start ">
-                        <span class="icon-calendar text-gray-400"></span>
-                        <span class="font-[iran-yekan-normal] text-gray-400 text-[12px]">13 تیر 1403</span>
-                    </div>
-                    <div class="flex gap-1.5 items-center justify-start ">
-                        <span class="icon-chart text-gray-400"></span>
-                        <span class="font-[iran-yekan-normal] text-gray-400 text-[12px]">470 بازدید</span>
-                    </div>
-                    <div class="flex gap-1.5 items-center justify-start ">
-                        <span class="icon-message text-gray-400"></span>
-                        <span class="font-[iran-yekan-normal] text-gray-400 text-[12px]">نظر</span>
-                    </div>
-                </div>
-                <hr noshade class="bg-gray-300 mt-4">
-                <div class="mt-4 flex">
-                    <p class="item-paragraph font-[iran-yekan-normal] text-[13px] leading-7 text-gray-400 inline-block">Microsoft Edge مایکروسافت پس از تلاش فراوان مرورگر اج را جایگزین اینترنت اکسپلورر کرد اما با وجود فایرفاکس و گوگل کروم باز هم نتوانست جایی در بین کاربران اینترنت برای خود دست و پا کند. در نهایت مایکروسافت تصمیم گرفت تا مرورگر Microsoft Edge را با هسته کرومیوم احیا کند که ظاهری شبیه به گوگل کروم دارد. سرعت بالا از نقاط قوت مرورگر Edge میباشد و کمبودی که از نسخه قبل مشاهده میشد در این نسخه جبران شده و آن پشتیبانی از افزونه های متنوع و پر کاربرد است، که با وجود هسته کرومیوم امکان دانلود و نصب افزونه های گوگل کروم از chrome web store وجود دارد.</p>
-                    <img src="img/microsoft-edge.png" alt="" class="w-[150px] inline-block">
-                </div>
-                <div class="justify-end flex items-center w-full mt-6">
-                    <a href="#" class="flex justify-center items-center bg-[--color5] text-[--color2] rounded-[10px] font-[iran-yekan-normal] text-[13px] w-[103px] h-[34px] my-hover2">ادامه مطلب</a>
-                </div>
-            </div>
-            <div class="soft min-h-[348px] bg-white my-shadow rounded-[20px] mt-4 p-4">
-                <div class="flex justify-between items-center">
-                    <div class="flex justify-start items-center">
-                        <div class="w-[40px] h-[40px] bg-[--color3] rounded-[8px] flex justify-center items-center">
-                            <span class="icon-windows text-[25px]"></span>
-                        </div>
-                        <h2 class="text-[#758694] font-[iran-yekan-bold] ms-2 text-[15px]">Microsoft Edge 96.0.1054.53 Win/Mac/Android + Portable مرورگر مایکروسافت اج کرومیوم</h2>
-                    </div>
-                    <div class="flex justify-center items-center flex-row-reverse">
-                        <span class="icon-heart text-[20px] text-red-600 cursor-pointer"></span>
-                        <span class="text-red-600 font-[iran-yekan-number] me-1 text-[13px]">27</span>
-                    </div>
-                </div>
-                <div class="flex mt-4 gap-5">
-                    <div class="flex gap-1.5 items-center justify-start ">
-                        <span class="icon-archive text-gray-400"></span>
-                        <span class="font-[iran-yekan-normal] text-gray-400 text-[13px]">مرورگر, نرم افزار</span>
-                    </div>
-                    <div class="flex gap-1.5 items-center justify-start ">
-                        <span class="icon-calendar text-gray-400"></span>
-                        <span class="font-[iran-yekan-normal] text-gray-400 text-[12px]">13 تیر 1403</span>
-                    </div>
-                    <div class="flex gap-1.5 items-center justify-start ">
-                        <span class="icon-chart text-gray-400"></span>
-                        <span class="font-[iran-yekan-normal] text-gray-400 text-[12px]">470 بازدید</span>
-                    </div>
-                    <div class="flex gap-1.5 items-center justify-start ">
-                        <span class="icon-message text-gray-400"></span>
-                        <span class="font-[iran-yekan-normal] text-gray-400 text-[12px]">نظر</span>
-                    </div>
-                </div>
-                <hr noshade class="bg-gray-300 mt-4">
-                <div class="mt-4 flex">
-                    <p class="item-paragraph font-[iran-yekan-normal] text-[13px] leading-7 text-gray-400 inline-block">Microsoft Edge مایکروسافت پس از تلاش فراوان مرورگر اج را جایگزین اینترنت اکسپلورر کرد اما با وجود فایرفاکس و گوگل کروم باز هم نتوانست جایی در بین کاربران اینترنت برای خود دست و پا کند. در نهایت مایکروسافت تصمیم گرفت تا مرورگر Microsoft Edge را با هسته کرومیوم احیا کند که ظاهری شبیه به گوگل کروم دارد. سرعت بالا از نقاط قوت مرورگر Edge میباشد و کمبودی که از نسخه قبل مشاهده میشد در این نسخه جبران شده و آن پشتیبانی از افزونه های متنوع و پر کاربرد است، که با وجود هسته کرومیوم امکان دانلود و نصب افزونه های گوگل کروم از chrome web store وجود دارد.</p>
-                    <img src="img/microsoft-edge.png" alt="" class="w-[150px] inline-block">
-                </div>
-                <div class="justify-end flex items-center w-full mt-6">
-                    <a href="#" class="flex justify-center items-center bg-[--color5] text-[--color2] rounded-[10px] font-[iran-yekan-normal] text-[13px] w-[103px] h-[34px] my-hover2">ادامه مطلب</a>
-                </div>
-            </div>
-            <div class="soft min-h-[348px] bg-white my-shadow rounded-[20px] mt-4 p-4">
-                <div class="flex justify-between items-center">
-                    <div class="flex justify-start items-center">
-                        <div class="w-[40px] h-[40px] bg-[--color3] rounded-[8px] flex justify-center items-center">
-                            <span class="icon-windows text-[25px]"></span>
-                        </div>
-                        <h2 class="text-[#758694] font-[iran-yekan-bold] ms-2 text-[15px]">Microsoft Edge 96.0.1054.53 Win/Mac/Android + Portable مرورگر مایکروسافت اج کرومیوم</h2>
-                    </div>
-                    <div class="flex justify-center items-center flex-row-reverse">
-                        <span class="icon-heart text-[20px] text-red-600 cursor-pointer"></span>
-                        <span class="text-red-600 font-[iran-yekan-number] me-1 text-[13px]">27</span>
-                    </div>
-                </div>
-                <div class="flex mt-4 gap-5">
-                    <div class="flex gap-1.5 items-center justify-start ">
-                        <span class="icon-archive text-gray-400"></span>
-                        <span class="font-[iran-yekan-normal] text-gray-400 text-[13px]">مرورگر, نرم افزار</span>
-                    </div>
-                    <div class="flex gap-1.5 items-center justify-start ">
-                        <span class="icon-calendar text-gray-400"></span>
-                        <span class="font-[iran-yekan-normal] text-gray-400 text-[12px]">13 تیر 1403</span>
-                    </div>
-                    <div class="flex gap-1.5 items-center justify-start ">
-                        <span class="icon-chart text-gray-400"></span>
-                        <span class="font-[iran-yekan-normal] text-gray-400 text-[12px]">470 بازدید</span>
-                    </div>
-                    <div class="flex gap-1.5 items-center justify-start ">
-                        <span class="icon-message text-gray-400"></span>
-                        <span class="font-[iran-yekan-normal] text-gray-400 text-[12px]">نظر</span>
-                    </div>
-                </div>
-                <hr noshade class="bg-gray-300 mt-4">
-                <div class="mt-4 flex">
-                    <p class="item-paragraph font-[iran-yekan-normal] text-[13px] leading-7 text-gray-400 inline-block">Microsoft Edge مایکروسافت پس از تلاش فراوان مرورگر اج را جایگزین اینترنت اکسپلورر کرد اما با وجود فایرفاکس و گوگل کروم باز هم نتوانست جایی در بین کاربران اینترنت برای خود دست و پا کند. در نهایت مایکروسافت تصمیم گرفت تا مرورگر Microsoft Edge را با هسته کرومیوم احیا کند که ظاهری شبیه به گوگل کروم دارد. سرعت بالا از نقاط قوت مرورگر Edge میباشد و کمبودی که از نسخه قبل مشاهده میشد در این نسخه جبران شده و آن پشتیبانی از افزونه های متنوع و پر کاربرد است، که با وجود هسته کرومیوم امکان دانلود و نصب افزونه های گوگل کروم از chrome web store وجود دارد.</p>
-                    <img src="img/microsoft-edge.png" alt="" class="w-[150px] inline-block">
-                </div>
-                <div class="justify-end flex items-center w-full mt-6">
-                    <a href="#" class="flex justify-center items-center bg-[--color5] text-[--color2] rounded-[10px] font-[iran-yekan-normal] text-[13px] w-[103px] h-[34px] my-hover2">ادامه مطلب</a>
-                </div>
-            </div>
-            <div class="soft min-h-[348px] bg-white my-shadow rounded-[20px] mt-4 p-4">
-                <div class="flex justify-between items-center">
-                    <div class="flex justify-start items-center">
-                        <div class="w-[40px] h-[40px] bg-[--color3] rounded-[8px] flex justify-center items-center">
-                            <span class="icon-windows text-[25px]"></span>
-                        </div>
-                        <h2 class="text-[#758694] font-[iran-yekan-bold] ms-2 text-[15px]">Microsoft Edge 96.0.1054.53 Win/Mac/Android + Portable مرورگر مایکروسافت اج کرومیوم</h2>
-                    </div>
-                    <div class="flex justify-center items-center flex-row-reverse">
-                        <span class="icon-heart text-[20px] text-red-600 cursor-pointer"></span>
-                        <span class="text-red-600 font-[iran-yekan-number] me-1 text-[13px]">27</span>
-                    </div>
-                </div>
-                <div class="flex mt-4 gap-5">
-                    <div class="flex gap-1.5 items-center justify-start ">
-                        <span class="icon-archive text-gray-400"></span>
-                        <span class="font-[iran-yekan-normal] text-gray-400 text-[13px]">مرورگر, نرم افزار</span>
-                    </div>
-                    <div class="flex gap-1.5 items-center justify-start ">
-                        <span class="icon-calendar text-gray-400"></span>
-                        <span class="font-[iran-yekan-normal] text-gray-400 text-[12px]">13 تیر 1403</span>
-                    </div>
-                    <div class="flex gap-1.5 items-center justify-start ">
-                        <span class="icon-chart text-gray-400"></span>
-                        <span class="font-[iran-yekan-normal] text-gray-400 text-[12px]">470 بازدید</span>
-                    </div>
-                    <div class="flex gap-1.5 items-center justify-start ">
-                        <span class="icon-message text-gray-400"></span>
-                        <span class="font-[iran-yekan-normal] text-gray-400 text-[12px]">نظر</span>
-                    </div>
-                </div>
-                <hr noshade class="bg-gray-300 mt-4">
-                <div class="mt-4 flex">
-                    <p class="item-paragraph font-[iran-yekan-normal] text-[13px] leading-7 text-gray-400 inline-block">Microsoft Edge مایکروسافت پس از تلاش فراوان مرورگر اج را جایگزین اینترنت اکسپلورر کرد اما با وجود فایرفاکس و گوگل کروم باز هم نتوانست جایی در بین کاربران اینترنت برای خود دست و پا کند. در نهایت مایکروسافت تصمیم گرفت تا مرورگر Microsoft Edge را با هسته کرومیوم احیا کند که ظاهری شبیه به گوگل کروم دارد. سرعت بالا از نقاط قوت مرورگر Edge میباشد و کمبودی که از نسخه قبل مشاهده میشد در این نسخه جبران شده و آن پشتیبانی از افزونه های متنوع و پر کاربرد است، که با وجود هسته کرومیوم امکان دانلود و نصب افزونه های گوگل کروم از chrome web store وجود دارد.</p>
-                    <img src="img/microsoft-edge.png" alt="" class="w-[150px] inline-block">
-                </div>
-                <div class="justify-end flex items-center w-full mt-6">
-                    <a href="#" class="flex justify-center items-center bg-[--color5] text-[--color2] rounded-[10px] font-[iran-yekan-normal] text-[13px] w-[103px] h-[34px] my-hover2">ادامه مطلب</a>
+                    <a href="#" class="flex justify-center items-center bg-[--color5] text-white rounded-[10px] font-[iran-yekan-normal] text-[13px] w-[103px] h-[34px] my-hover2">ادامه مطلب</a>
                 </div>
             </div>
 <!--            this code for pager in bottom-->
