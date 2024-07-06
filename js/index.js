@@ -35,6 +35,10 @@ $(function () {
             $("span[class*=icon]").addClass("text-[--color5]")
             $(".fallow").addClass("text-white")
             $("hr").addClass('my-op')
+            $(".group").children("a").removeClass("bg-[#E8F1F8]").addClass("bg-[#152F43]")
+            $(".group").children("a").children("div").children("div.items-center").addClass("bg-[#163955]")
+            $(".comment").removeClass("border").addClass("my-border")
+
         } else if (data === "light") {
             $(":root").css({
                 "--color1": "#F9FDFF",
@@ -51,7 +55,8 @@ $(function () {
             })
             $("span[class*=icon]").removeClass("text-[--color5]")
             $(".fallow").removeClass("text-white")
-
+            $(".group").children("a").addClass("bg-[#E8F1F8]").removeClass("bg-[#152F43]")
+            $(".group").children("a").children("div").children("div.items-center").removeClass("bg-[#163955]")
         }
     }
 
@@ -66,10 +71,10 @@ $(function () {
     $(".moon-btn").click(function () {
         let nowTheme = $(this).attr("data")
         $("body").attr("theme", nowTheme)
-        if (nowTheme === "light"){
-            $(".moon-btn").attr("data","dark")
-        }else {
-            $(".moon-btn").attr("data","light")
+        if (nowTheme === "light") {
+            $(".moon-btn").attr("data", "dark")
+        } else {
+            $(".moon-btn").attr("data", "light")
         }
         changeTheme(nowTheme)
     })
@@ -77,29 +82,13 @@ $(function () {
     changeTheme(bodyTheme)
 
 
-
-
-
-
-
-
-
-
-
-
     $('.owl-carousel').owlCarousel({
-        rtl: true,
-        loop: true,
-        margin: 3,
-        nav: false,
-        responsive: {
+        rtl: true, loop: true, margin: 3, nav: false, responsive: {
             0: {
                 items: 1
-            },
-            600: {
+            }, 600: {
                 items: 3
-            },
-            1000: {
+            }, 1000: {
                 items: 7
             }
         }

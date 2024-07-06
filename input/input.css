@@ -34,8 +34,8 @@
     --shadow: 0 0 30px 0px rgb(0 0 0 / 5%);
     --shadow2: 0 0 20px -8px #bc8971;
     --shadow3: 0 0 25px -5px #bc8971;
-    --icon : #758694;
-    --svg : #cce8ff;
+    --icon: #758694;
+    --svg: #cce8ff;
 }
 
 body {
@@ -43,7 +43,8 @@ body {
 }
 
 .my-container {
-    width: 68%;
+    width: 95%;
+    max-width: 1500px;
 }
 
 .my-shadow {
@@ -67,54 +68,79 @@ body {
 .my-op {
     opacity: 0.2;
 }
-.owl-carousel .owl-item img{
+
+.owl-carousel .owl-item img {
     width: 90px;
 }
-.owl-carousel .owl-stage{
+
+.owl-carousel .owl-stage {
     height: 220px;
     display: flex;
     align-items: center;
 }
-.owl-carousel.owl-rtl .owl-item{
+
+.owl-carousel.owl-rtl .owl-item {
     margin-right: 5px;
 }
-.one-line{
+
+.one-line {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
     width: 310px;
 }
-.my-hover2{
+
+.my-hover2 {
     transition: all 300ms;
 }
-.my-hover2:hover{
+
+.my-hover2:hover {
     box-shadow: var(--shadow3);
 }
+
 @layer components {
     .cat_btn.active {
         color: var(--color5);
         @apply font-[iran-yekan-bold]
     }
 }
-.instagram{
+
+.instagram {
     background-image: linear-gradient(212deg, #8339B5, #ED4A72);
 }
-.telegram{
+
+.telegram {
     background-image: linear-gradient(212deg, #37AEF3, #6dc6fa);
 }
-.page_active{
+
+.page_active {
     background-color: var(--color5);
     color: white;
 }
-.h-vh{
+
+.h-vh {
     height: 100vh;
 }
-.pos-hidden-top{
+
+.pos-hidden-top {
     top: -100%;
 }
-.category-map:last-child > span[class^="icon"]{
+
+.category-map:last-child > span[class^="icon"] {
     display: none;
 }
-.hover\:scale-101:hover{
+
+.hover\:scale-101:hover {
     scale: 1.015;
+}
+
+.my-border {
+    border: 1px solid rgba(108, 108, 108, 0.51);
+}
+
+
+@media screen and (max-width: 1400px) {
+    .my-container {
+        width: 96%;
+    }
 }

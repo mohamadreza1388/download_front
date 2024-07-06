@@ -2191,6 +2191,16 @@ video {
   border-style: none;
 }
 
+.bg-\[\#152F43\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(21 47 67 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#163955\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(22 57 85 / var(--tw-bg-opacity));
+}
+
 .bg-\[\#C9DEEF\] {
   --tw-bg-opacity: 1;
   background-color: rgb(201 222 239 / var(--tw-bg-opacity));
@@ -2199,11 +2209,6 @@ video {
 .bg-\[\#E8F1F8\] {
   --tw-bg-opacity: 1;
   background-color: rgb(232 241 248 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#F5F6F7\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(245 246 247 / var(--tw-bg-opacity));
 }
 
 .bg-\[--color1\] {
@@ -2374,6 +2379,10 @@ video {
   padding: 0.625rem;
 }
 
+.p-3 {
+  padding: 0.75rem;
+}
+
 .p-4 {
   padding: 1rem;
 }
@@ -2384,10 +2393,6 @@ video {
 
 .p-\[14px\] {
   padding: 14px;
-}
-
-.p-3 {
-  padding: 0.75rem;
 }
 
 .px-2 {
@@ -3061,7 +3066,8 @@ body {
 }
 
 .my-container {
-  width: 68%;
+  width: 95%;
+  max-width: 1500px;
 }
 
 .my-shadow {
@@ -3144,6 +3150,16 @@ body {
   scale: 1.015;
 }
 
+.my-border{
+  border: 1px solid rgba(108, 108, 108, 0.51);
+}
+
+@media screen and (max-width: 1400px) {
+  .my-container{
+    width: 96% ;
+  }
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
@@ -3213,6 +3229,11 @@ body {
 }
 
 @media (prefers-color-scheme: dark) {
+  .dark\:bg-\[\#152F43\] {
+    --tw-bg-opacity: 1;
+    background-color: rgb(21 47 67 / var(--tw-bg-opacity));
+  }
+
   @media (min-width: 1024px) {
     .dark\:lg\:hover\:\[paint-order\:markers\]:hover {
       paint-order: markers;
