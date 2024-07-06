@@ -26,6 +26,7 @@ $(function () {
                 "--color5": "#8A9AA7",
                 "--color6": "rgba(0, 0, 0, 0.43)",
                 "--color7": "#30414F",
+                "--color8": "#1E313F",
                 "--shadow": "0 0 30px 0px rgb(0 0 0 / 5%)",
                 "--shadow2": "0 0 20px -8px #bc8971",
                 "--shadow3": "0 0 25px -5px #bc8971",
@@ -33,7 +34,7 @@ $(function () {
 
             $("span[class*=icon]").addClass("text-[--color5]")
             $(".fallow").addClass("text-white")
-
+            $("hr").addClass('my-op')
         } else if (data === "light") {
             $(":root").css({
                 "--color1": "#F9FDFF",
@@ -43,6 +44,7 @@ $(function () {
                 "--color5": "#BC8971",
                 "--color6": "rgba(0, 0, 0, 0.43)",
                 "--color7": "#f1f4f4",
+                "--color8": "#F1F3F4",
                 "--shadow": "0 0 30px 0px rgb(0 0 0 / 5%)",
                 "--shadow2": "0 0 20px -8px #bc8971",
                 "--shadow3": "0 0 25px -5px #bc8971",
@@ -126,5 +128,9 @@ $(function () {
     $(".search-close").click(function () {
         $(".search-overlay").fadeOut(300)
         $(".search-box").addClass("pos-hidden-top").removeClass("top-10")
+    })
+    $(".accordion.active").children(".acc-content").slideDown(300)
+    $(".accordion").click(function () {
+        $(this).addClass("acc-active").children(".acc-content").slideToggle(300)
     })
 })
